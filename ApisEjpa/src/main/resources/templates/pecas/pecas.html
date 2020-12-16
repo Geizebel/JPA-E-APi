@@ -1,0 +1,30 @@
+<div th:insert="header :: topo" class="fundo"></div>
+<style>
+ .fundo{
+ background: url('https://www.machinemotos.com.br/img/slide-principal.jpg'); 
+ }
+ </style>
+
+<div class="w-100 p-3">
+  <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Tipo</th>
+      <th scope="col">Descricao</th>
+      <th width="10%" scope="col" colspan="2">Acoes</th>
+    </tr>
+  </thead>
+		<tbody>		
+			<tr th:each="peca : ${pecas}">
+				<td><span th:text="${peca.tipo}"></span></td>
+				<td><span th:text="${peca.descricao}"></span></td>
+				<td><a th:href="@{/pecas/editar/{id}(id=${peca.codigo})}">Editar</td>
+				<td><a th:href="@{/pecas/excluir/{id}(id=${peca.codigo})}">Excluir</td>
+			</tr>
+		</tbody>
+		</table>
+		
+	
+		</div>
+  
+<div th:insert="footer :: rodape"></div>

@@ -1,0 +1,31 @@
+<div th:insert="header :: topo" class="fundo"></div>
+<style>
+ .fundo{
+ background: url('https://www.machinemotos.com.br/img/slide-principal.jpg'); 
+ }
+ </style>
+<div class="w-100 p-3">
+  <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Nome</th>
+      <th scope="col">CPF</th>
+      <th scope="col">Matricula</th>
+      <th width="10%" scope="col" colspan="2">Ferramentas</th>
+    </tr>
+  </thead>
+		<tbody>		
+			<tr th:each="vendedor : ${vendedores}">
+				<td><span th:text="${vendedor.nome}"></span></td>
+				<td><span th:text="${vendedor.cpf}"></span></td>
+				<td><span th:text="${vendedor.matricula}"></span></td>
+				<td><a th:href="@{/vendedores/editar/{codigo}(codigo=${vendedor.codigo})}">Editar</td>
+				<td><a th:href="@{/vendedores/excluir/{codigo}(codigo=${vendedor.codigo})}">Excluir</td>
+			</tr>
+		</tbody>
+		</table>
+		
+	
+		</div>
+  
+<div th:insert="footer :: rodape"></div>

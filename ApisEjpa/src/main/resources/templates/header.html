@@ -1,0 +1,66 @@
+<header th:fragment="topo" class="fundo">
+<!doctype html>
+<html lang="pt" xmlns:th="htp://thymeleaf.org">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Projeto Web</title>
+     <style>
+ .cor{
+ color: #FFFFFF;
+ }
+ .fundo{
+ background: url('https://www.machinemotos.com.br/img/slide-principal.jpg'); 
+ }
+ </style>
+  </head>
+  
+  <body>
+<br>
+<h1 class="cor">Revendedora  <span class="badge badge-pill badge-dark">  Sua Moto esta aqui!</span></h1>
+<br>
+
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" href="/">Home</a>
+  </li>
+   <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Clientes</a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="/clientes/cadastrar">Adicionar Clientes</a>
+      <a class="dropdown-item" href="/clientes">Listar Clientes</a>
+   </div>
+  </li>
+
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Vendedores</a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="/vendedores/cadastrar">Adicionar Vendedor</a>
+      <a class="dropdown-item" href="/vendedores">Listar Vendedores</a>
+   </div>
+  </li>
+  
+   <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Pecas</a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="/pecas/cadastrar">Adicionar Peca</a>
+      <a class="dropdown-item" href="/pecas">Listar Peca</a>
+   </div>
+  </li>
+  
+
+   <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Motos</a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="/motos/cadastrar">Adicionar Moto</a>
+      <a class="dropdown-item" href="/motos">Listar Motos</a>
+   </div>
+  </li>
+  
+</ul>
+</header>
